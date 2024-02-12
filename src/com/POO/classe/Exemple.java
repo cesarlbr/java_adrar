@@ -1,3 +1,5 @@
+package com.POO.classe;
+
 public class Exemple {
     public String nom;
     public String prenom;
