@@ -4,13 +4,15 @@ public class Habitation {
     public String nom;
     public Double longueur;
     public Double largeur;
+    private int nbrEtage;
+
 
     public Habitation(){};
-    public Habitation(String nom, Double longueur, Double largeur){
+    public Habitation(String nom, Double longueur, Double largeur, int nbrEtage){
         this.nom = nom;
         this.longueur = longueur;
         this.largeur = largeur;
-
+        this.nbrEtage = nbrEtage;
     }
 
     public String getNom() {
@@ -36,7 +38,13 @@ public class Habitation {
     public void setLargeur(Double largeur) {
         this.largeur = largeur;
     }
+    public int getNbrEtage(){
+        return nbrEtage;
+    }
+    public void setNbrEtage(int nbrEtage){
+        this.nbrEtage = nbrEtage;
+    }
     public double surface(){
-        return this.largeur * this.longueur;
+        return this.largeur * this.longueur * this.nbrEtage;
     }
 }
