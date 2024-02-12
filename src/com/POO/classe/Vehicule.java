@@ -57,8 +57,15 @@ public class Vehicule {
         }
     }
 
-    public void plusRapide(){
-        
+    public String plusRapide(Vehicule autreVehicule){
+        if (this.vitesse > autreVehicule.getVitesse()){
+            return this.nom;
+        } else if (this.vitesse < autreVehicule.getVitesse()) {
+            return autreVehicule.getNom();
+        }else{
+            return "Les vehicules ont la même vitesse";
+        }
+
     }
 
 
